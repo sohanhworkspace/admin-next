@@ -1,6 +1,8 @@
+// components/ThemeToggle.js
 'use client'
 
 import { useEffect, useState } from 'react'
+import styles from '../styles/ThemeToggle.module.scss'
 
 const ThemeToggle = () => {
   const [theme, setTheme] = useState('light')
@@ -32,10 +34,7 @@ const ThemeToggle = () => {
   }
 
   return (
-    <button
-      onClick={toggleTheme}
-      className="p-2 rounded bg-gray-200 dark:bg-gray-700"
-    >
+    <button onClick={toggleTheme} className={styles.button}>
       {theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
     </button>
   )
